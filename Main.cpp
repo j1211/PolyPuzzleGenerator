@@ -1,3 +1,4 @@
+//フォントのサイズは（変数に入れておくのが面倒くさいため）, PaintLinesでは20, それ以外では30とします。
 #include "DxLib.h"
 #include "Mouse.h"
 #include "Keyboard.h"
@@ -34,10 +35,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		
 		//呼び出し
 		if (call_id == 0) {
+			SetFontSize(20);
 			lines = paintLines.main();
 			state = lines.first;
 		}
 		else if (call_id == 1) {
+			SetFontSize(30);
 			graph = generateGraph.main(lines.second);
 			state = get<0>(graph);
 		}

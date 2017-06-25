@@ -15,4 +15,5 @@ public:
 	Point cross_point(Line &l);
 	bool on_line(Point p);
 	void draw(DrawInfo *drawInfo, int color = 0, int thickness = 2);
+	double dist(Point &p);
 };

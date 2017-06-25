@@ -14,7 +14,7 @@ void GenerateGraph::drawGraph(vector<Point>& kotens, vector<vector<int>>& edges)
 		int x = drawInfo->toDrawX(kotens[i].real());
 		int y = drawInfo->toDrawY(kotens[i].imag());
 		DrawCircle(x, y, 3, GetColor(255, 0, 0), TRUE);
-		DrawFormatString(x + 5, y - 18, 0, "%d", i);
+		DrawFormatString(x + 7, y - 30, 0, "%d", i);
 	}
 	for (int i = 0; i < edges.size(); i++) {
 		for (int j = 0; j < edges[i].size(); j++) {

@@ -52,3 +52,10 @@ void Line::draw(DrawInfo * drawInfo, int color, int thickness)
 	int y2 = drawInfo->toDrawY(e.imag());
 	DrawLine(x1, y1, x2, y2, color, thickness);
 }
+
+double Line::dist(Point &p)
+{
+	if (dot(e - s, p - s) <= 0) return abs(p - s);
+	if (dot(s - e, p - e) <= 0) return abs(p - e);
+	return abs(cross(e - s, p - s)) / abs(e - s);
+}
